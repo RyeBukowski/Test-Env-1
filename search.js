@@ -19,14 +19,12 @@ function search() {
     console.log(response.result);
     videoID = response.result.items[0].id['videoId'];
     console.log(videoID);
-    startYoutube();
   });
 }
 
 
 
 // 2. This code loads the IFrame Player API code asynchronously.
-function startYoutube() {
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -66,6 +64,4 @@ function startYoutube() {
       function stopVideo() {
         player.stopVideo();
       }
-}
 
-startYoutube();
