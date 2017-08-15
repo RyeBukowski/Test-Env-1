@@ -19,7 +19,7 @@ function search() {
     console.log(response.result);
     videoID = response.result.items[0].id['videoId'];
     console.log(videoID);
-    document.getElementById['videoPlayer'].src = 'https://www.youtube.com/watch?v=' + videoID;
+    $('#videoPlayer').attr('src', 'https://www.youtube.com/watch?v=' + videoID);
   });
 }
 /*
