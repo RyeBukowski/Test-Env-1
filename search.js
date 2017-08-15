@@ -1,3 +1,5 @@
+var videoID = 'M7lc1UVf-VE';
+
 // After the API loads, call a function to enable the search box.
 function handleAPILoaded() {
   $('#search-button').attr('disabled', false);
@@ -15,6 +17,8 @@ function search() {
     var str = JSON.stringify(response.result);
     $('#search-container').html('<pre>' + str + '</pre>');
     console.log(response.result);
+    videoID = response.result.items[0].id['videoId'];
+    console.log(videoID);
   });
 }
 
@@ -34,7 +38,7 @@ function search() {
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'M7lc1UVf-VE',
+          videoId: videoID,
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
