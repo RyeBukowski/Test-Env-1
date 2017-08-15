@@ -19,7 +19,6 @@ function search() {
     console.log(response.result);
     videoID = response.result.items[0].id['videoId'];
     console.log(videoID);
-    $('#player').html('');
   });
 }
 
