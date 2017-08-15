@@ -19,18 +19,18 @@ function search() {
     console.log(response.result);
     videoID = response.result.items[0].id['videoId'];
     console.log(videoID);
-    /*$('#videoPlayer').attr('src', 'https://www.youtube.com/watch?v=' + videoID);*/
+    $('#videoPlayer').attr('src', 'https://www.youtube.com/embed/' + videoID);
   });
 }
 
-
-
+/*
 // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
@@ -66,3 +66,4 @@ function search() {
         player.stopVideo();
       }
 
+*/
